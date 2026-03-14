@@ -25,7 +25,6 @@ z-index:1000;
 display:flex;
 justify-content:space-between;
 align-items:center;
-flex-wrap:wrap;
 }
 
 .logo{
@@ -33,6 +32,17 @@ color:#00aaff;
 font-weight:600;
 font-size:22px;
 }
+
+/* MENU ICON */
+
+.menu-toggle{
+font-size:28px;
+cursor:pointer;
+display:none;
+color:white;
+}
+
+/* NAV LINKS */
 
 .nav-links{
 list-style:none;
@@ -44,11 +54,40 @@ gap:25px;
 text-decoration:none;
 color:white;
 font-weight:500;
-font-size:15px;
 }
 
 .nav-links a:hover{
 color:#00aaff;
+}
+
+/* MOBILE MENU */
+
+@media (max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+.nav-links{
+position:absolute;
+right:20px;
+top:70px;
+background:#000;
+flex-direction:column;
+width:200px;
+padding:20px;
+border-radius:8px;
+display:none;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.nav-links li{
+margin-bottom:15px;
+}
+
 }
 
 /* HERO */
