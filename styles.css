@@ -111,6 +111,7 @@ margin-bottom:15px;
 /* HERO */
 
 .hero{
+background: url("images/hero.webp") no-repeat center/cover;
 min-height:90vh;
 display:flex;
 align-items:center;
