@@ -86,33 +86,37 @@ header{
     color:#00aaff;
 }
 
-/* MOBILE MENU */
+/* ---------------- */
+/* MOBILE MENU SLIDE-IN LEFT WITH GLASS EFFECT */
+/* ---------------- */
 @media (max-width:768px){
+
     .menu-toggle{
         display:block;
     }
+
     .nav-links{
-        position:absolute;
-        top:60px;
-        right:20px;
+        position: fixed;           /* stay in place while scrolling */
+        top: 70px;                 /* just below header */
+        left: 0;                   /* start at left of screen */
         flex-direction: column;
-        width:200px;
-        padding:0; /* remove default padding for animation */
-        border-radius:8px;
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(12px);
-        border:1px solid rgba(255,255,255,0.1);
+        width: 220px;              /* menu width */
+        padding: 0;                /* animated padding */
+        border-radius: 0 12px 12px 0; /* rounded right side */
+        background: rgba(255, 255, 255, 0.1); /* glass background */
+        backdrop-filter: blur(15px);        /* blur the content behind */
+        -webkit-backdrop-filter: blur(15px);
+        border:1px solid rgba(255,255,255,0.15);
         z-index:1000;
 
-        /* SLIDE ANIMATION */
-        max-height:0;
-        overflow:hidden;
-        transition: max-height 0.5s ease, padding 0.5s ease;
+        /* slide animation from left */
+        transform: translateX(-100%);  /* hidden off-screen */
+        transition: transform 0.5s ease, padding 0.3s ease;
     }
 
     .nav-links.active{
-        max-height:500px; /* enough to show all links */
-        padding:20px;     /* restore padding when open */
+        transform: translateX(0);      /* slide in */
+        padding:20px;                  /* restore padding */
     }
 
     .nav-links li{
@@ -120,9 +124,17 @@ header{
     }
 
     .nav-links a{
-        text-align:center;
+        text-align:left;
         display:block;
         padding:8px 0;
+        color:white;
+        font-weight:500;
+    }
+
+    /* Optional: slightly darker text shadow for readability */
+    .nav-links a:hover{
+        color:#00aaff;
+        text-shadow: 0 0 10px rgba(0,0,0,0.4);
     }
 }
 
