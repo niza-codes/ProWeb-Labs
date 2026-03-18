@@ -388,23 +388,52 @@ padding:50px 20px;
 }
 
 /* SMALL PHONES */
-
 @media (max-width:480px){
 
-.hero{
-padding:60px 20px;
-}
+  /* HERO SECTION */
+  .hero{
+    padding:60px 20px;
+    background: url("images/hero-mobile.webp") no-repeat center/cover;
+  }
 
-.hero-content h1{
-font-size:26px;
-}
+  /* LIGHT OVERLAY */
+  .hero::before{
+    background: rgba(0,0,0,0.35); /* slightly darker for readability */
+  }
 
-.hero-content p{
-font-size:15px;
-}
+  /* FIRST GLOW EFFECT (already in ::after) */
+  .hero::after{
+    width:300px;
+    height:300px;
+    top:-80px;
+    left:-80px;
+    opacity:0.25;
+  }
 
-.btn{
-padding:10px 22px;
-}
+  /* SECOND GLOW EFFECT (HTML .glow) */
+  .glow{
+    width:300px;
+    height:300px;
+    bottom:-80px;
+    right:-80px;
+    opacity:0.25;
+  }
+
+  /* HERO TEXT */
+  .hero-content h1{
+    font-size:26px;
+    line-height:1.2;
+  }
+
+  .hero-content p{
+    font-size:15px;
+    line-height:1.4;
+  }
+
+  /* BUTTON */
+  .btn{
+    padding:10px 22px;
+    font-size:14px;
+  }
 
 }
