@@ -189,15 +189,17 @@ gap:25px;
 }
 
 .service-box{
-background:#111827;
 padding:30px;
-border-radius:10px;
+border-radius:12px;
 transition:0.3s;
+background: rgba(255,255,255,0.05);
+backdrop-filter: blur(10px);
+border:1px solid rgba(255,255,255,0.1);
 }
 
 .service-box:hover{
-transform:translateY(-5px);
-background:#1f2937;
+transform:translateY(-8px) scale(1.02);
+background: rgba(255,255,255,0.08);
 }
 
 /* ABOUT */
@@ -234,9 +236,16 @@ margin-top:40px;
 }
 
 .portfolio-item{
-background:#111827;
 padding:60px 20px;
-border-radius:10px;
+border-radius:12px;
+background: rgba(255,255,255,0.05);
+backdrop-filter: blur(10px);
+border:1px solid rgba(255,255,255,0.1);
+transition:0.3s;
+}
+
+.portfolio-item:hover{
+transform:scale(1.03);
 }
 
 /* CONTACT */
@@ -255,6 +264,11 @@ gap:15px;
 max-width:500px;
 margin-left:auto;
 margin-right:auto;
+padding:25px;
+background: rgba(255,255,255,0.05);
+backdrop-filter: blur(10px);
+border-radius:12px;
+border:1px solid rgba(255,255,255,0.1);
 }
 
 input, textarea{
