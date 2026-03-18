@@ -95,24 +95,34 @@ header{
         position:absolute;
         top:60px;
         right:20px;
-        flex-direction:column;
+        flex-direction: column;
         width:200px;
-        padding:20px;
+        padding:0; /* remove default padding for animation */
         border-radius:8px;
-        display:none;
         background: rgba(255, 255, 255, 0.05);
         backdrop-filter: blur(12px);
         border:1px solid rgba(255,255,255,0.1);
         z-index:1000;
+
+        /* SLIDE ANIMATION */
+        max-height:0;
+        overflow:hidden;
+        transition: max-height 0.5s ease, padding 0.5s ease;
     }
+
     .nav-links.active{
-        display:flex;
+        max-height:500px; /* enough to show all links */
+        padding:20px;     /* restore padding when open */
     }
+
     .nav-links li{
         margin-bottom:15px;
     }
+
     .nav-links a{
         text-align:center;
+        display:block;
+        padding:8px 0;
     }
 }
 
