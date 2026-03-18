@@ -47,6 +47,8 @@ align-items:center;
 color:white;
 font-weight:600;
 font-size:22px;
+background: none;
+border-radius: 0;
 }
 
 
@@ -58,14 +60,18 @@ font-size:28px;
 cursor:pointer;
 display:none;
 color:white;
+background: none;
+border-radius: 0;
 }
 
 /* NAV LINKS */
 
 .nav-links{
-list-style:none;
-display:flex;
-gap:25px;
+background: rgba(255, 255, 255, 0.05);
+backdrop-filter: blur(12px);
+border:1px solid rgba(255,255,255,0.1);
+border-radius:8px;
+display:none;
 }
 
 .nav-links a{
