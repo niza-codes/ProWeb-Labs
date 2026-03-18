@@ -79,7 +79,7 @@ header{
     text-decoration:none;
     color:white;
     font-weight:500;
-    transition:color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover{
@@ -87,43 +87,47 @@ header{
 }
 
 /* ---------------- */
-/* MOBILE MENU SLIDE-IN LEFT WITH STRONG GLASS EFFECT */
+/* MOBILE MENU SLIDE-IN LEFT WITH GLASS EFFECT */
 /* ---------------- */
 @media (max-width:768px){
 
-    .menu-toggle{
+    /* Header scaling */
+    .navbar.glass {
+        padding: 10px 6%;
+    }
+
+    .logo {
+        font-size:18px;
+    }
+
+    .menu-toggle {
         display:block;
-        z-index:1001; /* always above menu */
+        font-size:24px;
     }
 
+    /* Nav links slide-in */
     .nav-links{
-        position: fixed;           /* stay fixed while scrolling */
-        top: 100%;                 /* start just below header */
-        left: 0;                   /* slide in from left */
+        position: fixed;
+        top: 100%;  /* just below header */
+        left: 0;
         flex-direction: column;
-        width: 220px;              /* menu width */
-        padding: 20px;
-        border-radius: 0 12px 12px 0; /* rounded right side */
-        
-        /* stronger glass effect */
-        background: rgba(0,0,0,0.25);
-        backdrop-filter: blur(40px);
-        -webkit-backdrop-filter: blur(20px);
+        width: 220px;
+        padding:0;
+        border-radius:0 12px 12px 0;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
         border:1px solid rgba(255,255,255,0.15);
-
         z-index:1000;
-
-        /* slide animation */
         transform: translateX(-100%);
-        transition: transform 0.5s ease;
+        transition: transform 0.5s ease, padding 0.3s ease;
     }
 
-    /* When menu is active (toggled) */
     .nav-links.active{
-        transform: translateX(0);   /* slide in */
+        transform: translateX(0);
+        padding:20px;
     }
 
-    /* Menu items */
     .nav-links li{
         margin-bottom:15px;
     }
@@ -131,16 +135,11 @@ header{
     .nav-links a{
         text-align:left;
         display:block;
-        padding:10px 0;
+        padding:8px 0;
         color:white;
         font-weight:500;
+        text-shadow: 0 0 10px rgba(0,0,0,0.4);
     }
-
-    .nav-links a:hover{
-        color:#00aaff;
-        text-shadow:0 0 10px rgba(0,0,0,0.4);
-    }
-
 }
 
 /* ---------------- */
@@ -231,7 +230,6 @@ header{
 
 /* ---------------- */
 /* SERVICES */
-/* ---------------- */
 .services{
     padding:70px 8%;
     text-align:center;
@@ -411,11 +409,23 @@ footer{
     .portfolio-item{
         padding:50px 20px;
     }
-
 }
 
 /* SMALL PHONES */
 @media (max-width:480px){
+
+    /* Header */
+    .navbar.glass {
+        padding:8px 5%;
+    }
+
+    .logo {
+        font-size:16px;
+    }
+
+    .menu-toggle {
+        font-size:20px;
+    }
 
     /* HERO SECTION */
     .hero{
@@ -423,12 +433,10 @@ footer{
         background: url("images/hero-mobile.webp") no-repeat center/cover;
     }
 
-    /* LIGHT OVERLAY */
     .hero::before{
         background: rgba(0,0,0,0.35);
     }
 
-    /* FIRST GLOW EFFECT (already in ::after) */
     .hero::after,
     .glow{
         width:300px;
@@ -440,7 +448,6 @@ footer{
         opacity:0.25;
     }
 
-    /* HERO TEXT */
     .hero-content h1{
         font-size:26px;
         line-height:1.2;
@@ -451,10 +458,15 @@ footer{
         line-height:1.4;
     }
 
-    /* BUTTON */
     .btn{
         padding:10px 22px;
         font-size:14px;
     }
 
+    /* MOBILE NAVIGATION */
+    .nav-links{
+        width:200px;
+        top:100%;
+        padding:15px;
+    }
 }
