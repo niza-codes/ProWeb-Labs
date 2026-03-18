@@ -111,13 +111,39 @@ margin-bottom:15px;
 /* HERO */
 
 .hero{
-min-height:85vh;
+min-height:90vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 padding:40px 20px;
-background:linear-gradient(135deg,#001f3f,#000);
+background: linear-gradient(135deg,#001f3f,#000);
+position:relative;
+overflow:hidden;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+background:#00aaff;
+filter:blur(120px);
+top:-100px;
+left:-100px;
+opacity:0.4;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+background:#0066ff;
+filter:blur(120px);
+bottom:-100px;
+right:-100px;
+opacity:0.3;
 }
 
 .hero-content h1{
