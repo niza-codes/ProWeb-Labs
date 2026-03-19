@@ -232,8 +232,15 @@ header{
     position:absolute;
     inset:0;
     border-radius:12px;
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(12px);
+
+    /* NO BLUR */
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.6),   /* dark bottom for text */
+        rgba(0,0,0,0.1)    /* lighter top */
+    );
+
+    z-index:0;
 }
 
 .portfolio-text{
