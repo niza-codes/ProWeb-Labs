@@ -12,17 +12,13 @@
 
 <body>
 
-<!-- NAVBAR -->
-
-<header>
-
 <nav class="navbar glass">
 
 <h2 class="logo">ProWeb Labs</h2>
 
-<div class="menu-toggle" id="menu-toggle">
-☰
-</div>
+<div class="menu-toggle" id="menu-toggle">☰</div>
+
+<div class="theme-toggle" id="theme-toggle">🌙</div>
 
 <ul class="nav-links" id="nav-links">
 <li><a href="#home">Home</a></li>
@@ -196,6 +192,28 @@ entry.target.classList.add("show");
 
 document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
 
+</script>
+
+<script>
+const themeToggle = document.getElementById("theme-toggle");
+
+// load saved theme
+if(localStorage.getItem("theme") === "light"){
+    document.body.classList.add("light-mode");
+    themeToggle.textContent = "☀️";
+}
+
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+
+    if(document.body.classList.contains("light-mode")){
+        themeToggle.textContent = "☀️";
+        localStorage.setItem("theme","light");
+    } else {
+        themeToggle.textContent = "🌙";
+        localStorage.setItem("theme","dark");
+    }
+});
 </script>
   
 </body>
