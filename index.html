@@ -8,9 +8,11 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-</head>
-
+</head>  
+  
 <body>
+
+<header>
 
 <nav class="navbar">
 
@@ -187,7 +189,8 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 // CLOSE MENU WHEN CLICK OUTSIDE
 document.addEventListener("click", (e) => {
-    if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+    if (!nav.contains(e.target) && 
+        !toggle.contains(e.target)) {
         nav.classList.remove("active");
     }
 });
