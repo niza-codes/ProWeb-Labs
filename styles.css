@@ -41,6 +41,8 @@ header{
     padding:15px 6%;
     background: rgba(0,0,0,0.7);
     backdrop-filter: blur(10px);
+    position:relative; /* IMPORTANT */
+    z-index:9999;
 }
 
 body.light .navbar{
@@ -75,6 +77,7 @@ body.light .navbar{
     list-style:none;
     display:flex;
     gap:25px;
+    z-index:10000; /* ABOVE EVERYTHING */
 }
 
 .nav-links a{
@@ -94,29 +97,30 @@ body.light .navbar{
 
     .menu-toggle{
         display:block;
+        z-index:10001; /* ABOVE MENU */
     }
 
     .nav-links{
-        position:fixed;
-        top:60px;
-        left:0;
-        width:220px;
-        height:calc(100vh - 60px);
-        flex-direction:column;
-        padding:20px;
-        background:#0a0f1c; /* SOLID COLOR */
-        transform:translateX(-100%);
-        transition:0.4s;
-        z-index:9998;
-    }
+    position:absolute; /* KEY FIX */
+    top:100%;          /* perfectly under navbar */
+    left:0;
+    width:220px;
+    flex-direction:column;
+    padding:0;
+    background:#0a0f1c;
+    transform:translateX(-100%);
+    transition:0.4s;
+    z-index:10000;
+}
 
     body.light .nav-links{
-        background:#ffffff;
-    }
+    background:#ffffff;
+}
 
     .nav-links.active{
-        transform:translateX(0);
-    }
+    transform:translateX(0);
+    padding:20px;
+}
 
     .nav-links li{
         margin-bottom:15px;
