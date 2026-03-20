@@ -132,6 +132,31 @@ body.light .navbar{
 }
 
 /* ---------------- */
+/* SECTION DIVIDER */
+/* ---------------- */
+.section-divider{
+    width:100%;
+    height:1px;
+    margin:60px auto;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255,255,255,0.4),
+        transparent
+    );
+}
+
+/* LIGHT MODE */
+body.light .section-divider{
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(0,0,0,0.4),
+        transparent
+    );
+}
+
+/* ---------------- */
 /* HERO */
 /* ---------------- */
 .hero{
