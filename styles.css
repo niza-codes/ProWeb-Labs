@@ -194,7 +194,7 @@ section{
 }
 
 .hero-content h1{
-    font-size:clamp(28px,5vw,42px);
+    font-size:clamp(30px,5vw,42px);
 }
 
 .hero-content p{
@@ -356,7 +356,7 @@ body.light form {
 footer{
     text-align:center;
     padding:20px;
-    text-size:14px;
+    text-size:12px;
 }
 
 /* ---------------- */
