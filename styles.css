@@ -328,6 +328,28 @@ form{
     border-radius:12px;
 }
 
+/* INPUTS + TEXTAREA */
+input, textarea{
+    padding:14px;
+    border:none;
+    border-radius:5px;
+    width:100%;
+    font-size:15px;
+}
+
+/* MAKE MESSAGE BOX LONGER */
+textarea{
+    min-height:180px;   /* increase this if you want it even longer */
+    resize:vertical;
+}
+
+/* CONTACT FORM LIGHT MODE */
+body.light form {
+    background: rgba(255,255,255,0.95); /* solid-ish white */
+    color: #111;                         /* dark text for contrast */
+    border: 1px solid rgba(0,0,0,0.1);   /* optional subtle border */
+}
+
 /* ---------------- */
 /* FOOTER */
 /* ---------------- */
