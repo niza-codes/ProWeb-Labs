@@ -130,10 +130,11 @@ body.light .navbar{
         font-size:18px;
     }
 
-.hero{
-    background:url("images/hero-mobile.webp") no-repeat center/cover;
+    .hero{
+        background:url("images/hero-mobile.webp") no-repeat center/cover;
+    }
 }
-
+    
 /* ---------------- */
 /* SECTION DIVIDER */
 /* ---------------- */
