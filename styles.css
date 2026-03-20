@@ -337,9 +337,9 @@ input, textarea{
     font-size:15px;
 }
 
-/* MAKE MESSAGE BOX LONGER */
+/* MESSAGE BOX */
 textarea{
-    min-height:180px;   /* increase this if you want it even longer */
+    min-height:160px;   /* increase this if you want it even longer */
     resize:vertical;
 }
 
