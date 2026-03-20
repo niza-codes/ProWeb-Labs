@@ -157,6 +157,23 @@ body.light .section-divider{
 }
 
 /* ---------------- */
+/* SECTION HEADINGS FIX */
+/* ---------------- */
+section h2{
+    text-align:center;
+    margin:40px 0 25px; /* TOP space from divider, BOTTOM space from content */
+    font-size:32px;
+}
+
+/* MOBILE TUNING */
+@media (max-width:768px){
+    section h2{
+        margin:30px 0 20px;
+        font-size:26px;
+    }
+}
+
+/* ---------------- */
 /* HERO */
 /* ---------------- */
 .hero{
