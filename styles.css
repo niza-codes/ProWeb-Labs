@@ -129,6 +129,9 @@ body.light .navbar{
     .theme-toggle{
         font-size:18px;
     }
+
+.hero{
+    background:url("images/hero-mobile.webp") no-repeat center/cover;
 }
 
 /* ---------------- */
@@ -170,9 +173,6 @@ section h2{
         margin:15px 0 15px;
         font-size:26px;
     }
-
-.hero{
-    background:url("images/hero-mobile.webp") no-repeat center/cover;
 }
 
 /* ---------------- */
