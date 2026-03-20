@@ -135,9 +135,9 @@ body.light .navbar{
 /* SECTION DIVIDER */
 /* ---------------- */
 .section-divider{
-    width:100%;
+    width:80%;
     height:1px;
-    margin:60px auto;
+    margin:40px auto 0; /* LESS space below divider */
     background: linear-gradient(
         to right,
         transparent,
@@ -146,7 +146,6 @@ body.light .navbar{
     );
 }
 
-/* LIGHT MODE */
 body.light .section-divider{
     background: linear-gradient(
         to right,
@@ -157,20 +156,27 @@ body.light .section-divider{
 }
 
 /* ---------------- */
-/* SECTION HEADINGS FIX */
+/* SECTION HEADINGS */
 /* ---------------- */
 section h2{
     text-align:center;
-    margin:40px 0 25px; /* TOP space from divider, BOTTOM space from content */
+    margin:20px 0 20px; /* equal spacing above & below */
     font-size:32px;
 }
 
-/* MOBILE TUNING */
+/* MOBILE */
 @media (max-width:768px){
     section h2{
-        margin:30px 0 20px;
+        margin:15px 0 15px;
         font-size:26px;
     }
+}
+
+/* ---------------- */
+/* SCROLL OFFSET FIX */
+/* ---------------- */
+section{
+    scroll-margin-top: 90px;
 }
 
 /* ---------------- */
