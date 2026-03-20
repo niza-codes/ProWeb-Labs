@@ -339,7 +339,7 @@ input, textarea{
 
 /* MESSAGE BOX */
 textarea{
-    min-height:160px;   /* increase this if you want it even longer */
+    min-height:140px;   /* increase this if you want it even longer */
     resize:vertical;
 }
 
