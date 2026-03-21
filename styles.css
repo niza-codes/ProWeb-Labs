@@ -157,7 +157,7 @@ body.light .navbar{
 
     /* HERO MOBILE BACKGROUND */
     .hero{
-        background: url("images/hero-mobile.png") center/cover no-repeat;
+        background: url("images/hero.webp") center/cover no-repeat;
     }
 }
 
