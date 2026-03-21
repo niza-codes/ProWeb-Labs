@@ -303,12 +303,36 @@ body.light form {
     border: 1px solid rgba(0,0,0,0.1);   /* optional subtle border */
 }
 
+.contact form button {
+    display: inline-block;
+    background: #00aaff;       /* same blue as hero button */
+    color: #fff;
+    padding: 14px 28px;        /* slightly taller than default */
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact form button:hover {
+    background: #0088cc;       /* slightly darker on hover */
+}
+
 input, textarea{
     padding:16px 16px;   /* increased height */
     border:none;
     border-radius:6px;   /* slightly smoother */
     width:100%;
     font-size:16px;      /* better readability */
+}
+
+body.light input,
+body.light textarea {
+    border: 1px solid rgba(0,0,0,0.2);  /* subtle dark border */
+    background: #fff;                    /* white background for fields */
+    color: #111;                         /* text color */
 }
 
 /* ---------------- */
