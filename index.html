@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ProWeb Labs</title>
+
 <link rel="stylesheet" href="styles.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
 
-</head>  
-  
 <body>
 
+<!-- HEADER -->
 <header>
-
 <nav class="navbar">
 
 <h2 class="logo">ProWeb Labs</h2>
@@ -31,17 +31,14 @@
 </ul>
 
 </nav>
-
 </header>
 
 <!-- HERO -->
-
 <section id="home" class="hero">
 
 <div class="glow"></div>
-  
-<div class="hero-content">
 
+<div class="hero-content">
 <h1>Building the Future with Technology</h1>
 
 <p>
@@ -49,13 +46,13 @@ Full-Stack Development • Websites • Mobile Apps • Artificial Intelligence 
 </p>
 
 <a href="#contact" class="btn">Work With Us</a>
-
 </div>
 
 </section>
 
-<!-- SERVICES -->
+<div class="section-divider"></div>
 
+<!-- SERVICES -->
 <section id="services" class="services hidden glass">
 
 <h2 class="hidden">Our Services</h2>
@@ -89,7 +86,6 @@ Full-Stack Development • Websites • Mobile Apps • Artificial Intelligence 
 <div class="section-divider"></div>
 
 <!-- ABOUT -->
-
 <section id="about" class="about hidden">
 
 <div class="about-content">
@@ -116,34 +112,33 @@ digital products.
 <!-- PORTFOLIO -->
 <section id="portfolio" class="portfolio hidden glass">
 
-  <h2 class="hidden">Our Work</h2>
+<h2 class="hidden">Our Work</h2>
 
-  <div class="portfolio-grid">
+<div class="portfolio-grid">
 
-    <div class="portfolio-item" style="background-image:url('images/project1.webp')">
-      <div class="portfolio-text">Black Success Bridge</div>
-    </div>
+<div class="portfolio-item" style="background-image:url('images/project1.webp')">
+<div class="portfolio-text">Black Success Bridge</div>
+</div>
 
-    <div class="portfolio-item" style="background-image:url('images/project2.webp')">
-      <div class="portfolio-text">Project 2</div>
-    </div>
+<div class="portfolio-item" style="background-image:url('images/project2.webp')">
+<div class="portfolio-text">Project 2</div>
+</div>
 
-    <div class="portfolio-item" style="background-image:url('images/project3.webp')">
-      <div class="portfolio-text">Project 3</div>
-    </div>
+<div class="portfolio-item" style="background-image:url('images/project3.webp')">
+<div class="portfolio-text">Project 3</div>
+</div>
 
-    <div class="portfolio-item" style="background-image:url('images/project4.webp')">
-      <div class="portfolio-text">Project 4</div>
-    </div>
+<div class="portfolio-item" style="background-image:url('images/project4.webp')">
+<div class="portfolio-text">Project 4</div>
+</div>
 
-  </div>
+</div>
 
 </section>
 
 <div class="section-divider"></div>
 
 <!-- CONTACT -->
-
 <section id="contact" class="contact hidden glass">
 
 <h2>Contact Us</h2>
@@ -156,7 +151,7 @@ digital products.
 
 <input type="email" placeholder="Email Address" required>
 
-<input type="phone number" placeholder="Phone Number" required>
+<input type="tel" placeholder="Phone Number" required>
 
 <textarea placeholder="Your Message"></textarea>
 
@@ -166,15 +161,12 @@ digital products.
 
 </section>
 
-
 <!-- FOOTER -->
-
 <footer>
-
 <p>© 2026 ProWeb Labs. All Rights Reserved.</p>
-
 </footer>
 
+<!-- MENU SCRIPT -->
 <script>
 const toggle = document.getElementById("menu-toggle");
 const nav = document.getElementById("nav-links");
@@ -193,15 +185,14 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 // CLOSE MENU WHEN CLICK OUTSIDE
 document.addEventListener("click", (e) => {
-    if (!nav.contains(e.target) && 
-        !toggle.contains(e.target)) {
+    if (!nav.contains(e.target) && !toggle.contains(e.target)) {
         nav.classList.remove("active");
     }
 });
 </script>
 
+<!-- SCROLL ANIMATION -->
 <script>
-
 const observer = new IntersectionObserver((entries) => {
 entries.forEach(entry => {
 if(entry.isIntersecting){
@@ -211,9 +202,9 @@ entry.target.classList.add("show");
 });
 
 document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
-
 </script>
 
+<!-- THEME TOGGLE -->
 <script>
 const themeToggle = document.getElementById("theme-toggle");
 
@@ -227,6 +218,6 @@ themeToggle.addEventListener("click", () => {
     }
 });
 </script>
-  
+
 </body>
 </html>
