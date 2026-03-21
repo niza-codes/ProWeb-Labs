@@ -289,32 +289,32 @@ body.light .about{
 .portfolio-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+    gap:25px;
 }
 
-.portfolio-item{
-    min-height:200px;
-    border-radius:12px;
-    display:flex;
-    align-items:flex-end;
-    justify-content:center;
-    padding:20px;
-    background-size:cover;
-}
-
-.portfolio-text{
-    font-weight:600;
-    margin-top:10px; /* space below image */
-    text-align:center;
-    text-shadow:none; /* remove shadow since it's under image */
-    color: inherit;   /* use default text color */
-    font-size:16px;
-}
-
+/* wrapper to keep image and caption together */
 .portfolio-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* portfolio image */
+.portfolio-item{
+    width:100%;
+    min-height:200px;
+    border-radius:12px;
+    background-size:cover;
+    background-position:center;
+}
+
+/* portfolio caption */
+.portfolio-text{
+    margin-top:10px;   /* space between image and text */
+    font-weight:600;
+    text-align:center;
+    font-size:16px;
+    color:inherit;
 }
 
 /* ---------------- */
