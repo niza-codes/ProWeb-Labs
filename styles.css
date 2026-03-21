@@ -95,14 +95,19 @@ body.light .navbar{
 /* ---------------- */
 @media (max-width:768px){
 
+    /* MENU BUTTON */
     .menu-toggle{
         display:block;
-        z-index:10001;
+        font-size:28px;
+        cursor:pointer;
+        z-index:10001; /* above menu */
+        order: 3;       /* rightmost in navbar */
     }
 
+    /* NAV LINKS MENU */
     .nav-links{
         position:absolute;
-        top:100%;
+        top:100%;       /* right below navbar */
         left:0;
         width:220px;
         flex-direction:column;
@@ -126,17 +131,33 @@ body.light .navbar{
         margin-bottom:15px;
     }
 
+    /* MOBILE NAVBAR FLEX FIX */
+    .navbar {
+        display: flex;
+        justify-content: space-between; /* logo left, toggle middle, menu right */
+        align-items: center;
+        padding: 15px 6%;
+        position: relative;
+    }
+
+    /* THEME TOGGLE */
     .theme-toggle {
-    left: 50%;               /* center in navbar */
-    transform: translateX(-50%);
-    font-size: 18px;         /* slightly smaller on mobile */
-    z-index: 10002;          /* keep above mobile menu */
-}
+        position: static;    /* remove absolute positioning */
+        transform: none;     /* reset translate */
+        order: 2;            /* middle element in flex */
+        font-size:18px;
+        margin: 0 12px;      /* optional spacing from logo/menu */
+        z-index: 10002;      /* above menu */
+    }
 
+    /* LOGO */
+    .logo {
+        order: 1;            /* leftmost item in flex */
+    }
 
-    /* ✅ TEMP FIX: USE WORKING IMAGE */
+    /* HERO MOBILE BACKGROUND */
     .hero{
-        background:url("images/project1.webp") center/cover no-repeat;
+        background: url("images/hero-mobile.png") center/cover no-repeat;
     }
 }
 
