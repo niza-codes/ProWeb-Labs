@@ -297,6 +297,12 @@ form{
     border-radius:12px;
 }
 
+body.light form {
+    background: rgba(255,255,255,0.95); /* solid-ish white so the form is visible */
+    color: #111;                         /* dark text for contrast */
+    border: 1px solid rgba(0,0,0,0.1);   /* optional subtle border */
+}
+
 input, textarea{
     padding:16px 16px;   /* increased height */
     border:none;
