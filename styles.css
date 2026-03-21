@@ -297,6 +297,14 @@ form{
     border-radius:12px;
 }
 
+input, textarea{
+    padding:16px 16px;   /* increased height */
+    border:none;
+    border-radius:6px;   /* slightly smoother */
+    width:100%;
+    font-size:16px;      /* better readability */
+}
+
 /* ---------------- */
 /* FOOTER */
 /* ---------------- */
