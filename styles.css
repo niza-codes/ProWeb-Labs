@@ -302,6 +302,15 @@ body.light .about{
     background-size:cover;
 }
 
+.portfolio-text{
+    font-weight:600;
+    margin-top:10px; /* space below image */
+    text-align:center;
+    text-shadow:none; /* remove shadow since it's under image */
+    color: inherit;   /* use default text color */
+    font-size:16px;
+}
+
 /* ---------------- */
 /* CONTACT */
 /* ---------------- */
