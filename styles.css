@@ -55,7 +55,7 @@ body.light .navbar{
     font-weight:600;
 }
 
-/* TOGGLE (CENTERED) */
+/* TOGGLE */
 .theme-toggle{
     position:absolute;
     left:50%;
@@ -130,9 +130,9 @@ body.light .navbar{
         font-size:18px;
     }
 
-    /* ✅ FIXED MOBILE HERO BACKGROUND */
+    /* ✅ TEMP FIX: USE WORKING IMAGE */
     .hero{
-        background:url("images/hero-mobile.png") center/cover no-repeat;
+        background:url("images/project1.webp") center/cover no-repeat;
     }
 }
 
@@ -165,23 +165,22 @@ body.light .section-divider{
 /* ---------------- */
 section h2{
     text-align:center;
-    margin:20px 0 20px;
+    margin:20px 0;
     font-size:32px;
 }
 
-/* MOBILE */
 @media (max-width:768px){
     section h2{
-        margin:15px 0 15px;
+        margin:15px 0;
         font-size:26px;
     }
 }
 
 /* ---------------- */
-/* SCROLL OFFSET FIX */
+/* SCROLL OFFSET */
 /* ---------------- */
 section{
-    scroll-margin-top: 90px;
+    scroll-margin-top:90px;
 }
 
 /* ---------------- */
@@ -196,25 +195,18 @@ section{
     padding:40px 20px;
     position:relative;
     background:url("images/hero.webp") center/cover no-repeat;
-    z-index:0;
 }
 
 .hero-content{
     position:relative;
-    z-index:2;
-}
-
-.hero-content h1{
-    font-size:clamp(30px,5vw,42px);
+    z-index:1;
 }
 
 .hero-content p{
     margin:20px 0;
 }
 
-/* ---------------- */
-/* HERO BUTTON */
-/* ---------------- */
+/* BUTTON */
 .btn{
     display:inline-block;
     background:#00aaff;
@@ -222,16 +214,6 @@ section{
     padding:12px 28px;
     border-radius:6px;
     text-decoration:none;
-    font-weight:500;
-    transition:0.3s;
-}
-
-.btn:hover{
-    background:#0088cc;
-}
-
-body.light .btn{
-    color:#fff;
 }
 
 /* ---------------- */
@@ -249,27 +231,9 @@ body.light .btn{
 }
 
 .service-box{
-    position:relative;
     padding:30px;
     border-radius:12px;
-    overflow:hidden;
     background: rgba(255,255,255,0.05);
-}
-
-.service-box::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background-size:cover;
-    background-position:center;
-    filter:blur(8px);
-    transform:scale(1.1);
-    opacity:0.4;
-}
-
-.service-box *{
-    position:relative;
-    z-index:1;
 }
 
 /* ---------------- */
@@ -308,21 +272,12 @@ body.light .about{
     background-size:cover;
 }
 
-.portfolio-text{
-    font-weight:600;
-    text-shadow:0 2px 10px rgba(0,0,0,0.7);
-}
-
 /* ---------------- */
 /* CONTACT */
 /* ---------------- */
 .contact{
     padding:70px 8%;
     text-align:center;
-}
-
-body.light .contact{
-    color:#111;
 }
 
 form{
@@ -337,44 +292,10 @@ form{
     border-radius:12px;
 }
 
-input, textarea{
-    padding:14px;
-    border:none;
-    border-radius:5px;
-    width:100%;
-    font-size:15px;
-}
-
-textarea{
-    min-height:140px;
-    resize:vertical;
-}
-
-body.light form {
-    background: rgba(255,255,255,0.95);
-    color: #111;
-    border: 1px solid rgba(0,0,0,0.1);
-}
-
 /* ---------------- */
 /* FOOTER */
 /* ---------------- */
 footer{
     text-align:center;
     padding:20px;
-    text-size:12px;
-}
-
-/* ---------------- */
-/* ANIMATION */
-/* ---------------- */
-.hidden{
-    opacity:0;
-    transform:translateY(40px);
-    transition:0.8s;
-}
-
-.show{
-    opacity:1;
-    transform:translateY(0);
 }
