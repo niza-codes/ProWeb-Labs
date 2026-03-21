@@ -126,9 +126,13 @@ body.light .navbar{
         margin-bottom:15px;
     }
 
-    .theme-toggle{
-        font-size:18px;
-    }
+    .theme-toggle {
+    left: 50%;               /* center in navbar */
+    transform: translateX(-50%);
+    font-size: 18px;         /* slightly smaller on mobile */
+    z-index: 10002;          /* keep above mobile menu */
+}
+
 
     /* ✅ TEMP FIX: USE WORKING IMAGE */
     .hero{
