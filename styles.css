@@ -208,7 +208,7 @@ section{
 
 .hero-content h1{
     font-size:clamp(32px,6vw,54px);
-    font-weight:500;
+    font-weight:600;
 }
 
 .hero-content p{
