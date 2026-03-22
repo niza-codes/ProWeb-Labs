@@ -270,7 +270,10 @@ section{
 
     display:flex;
     flex-direction:column;
-    justify-content:flex-end;
+
+    justify-content:center;   /* vertical center */
+    align-items:center;       /* horizontal center */
+    text-align:center;        /* text alignment */
 }
 
 /* BACKGROUND IMAGE */
