@@ -239,5 +239,15 @@ themeToggle.addEventListener("click", () => {
 });
 </script>
 
+<script>
+const budgetSlider = document.getElementById("budget");
+const budgetValue = document.getElementById("budget-value");
+
+budgetSlider.addEventListener("input", () => {
+    let value = Number(budgetSlider.value).toLocaleString();
+    budgetValue.textContent = "ZMW " + value;
+});
+</script>
+
 </body>
 </html>
