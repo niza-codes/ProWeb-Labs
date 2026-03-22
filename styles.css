@@ -308,7 +308,7 @@ section{
 }
 
 .service-2::before{
-    background-image:url("images/mobile.webp");
+    background-image:url("images/app.webp");
 }
 
 .service-3::before{
@@ -316,17 +316,12 @@ section{
 }
 
 .service-4::before{
-    background-image:url("images/design.webp");
+    background-image:url("images/app.webp");
 }
 
 /* HOVER EFFECT */
 .service-box:hover::before{
     transform:scale(1.05);
-}
-
-/* LIGHT MODE (DO NOT REMOVE IMAGES) */
-body.light .service-box::after{
-    background: rgba(255,255,255,0.4); /* lighter overlay instead */
 }
 
 /* ---------------- */
