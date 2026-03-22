@@ -155,11 +155,6 @@ body.light .navbar{
         order: 1;            /* leftmost item in flex */
     }
 
-    /* HERO MOBILE BACKGROUND */
-    .hero{
-        background: url("images/hero.webp") center/cover no-repeat;
-    }
-
 }
 
 /* ---------------- */
@@ -235,6 +230,13 @@ section{
 
 .hero-content p{
     margin:20px 0;
+}
+
+@media (max-width:768px){
+    /* HERO MOBILE BACKGROUND */
+    .hero{
+        background: url("images/hero-mobile.webp") center/cover no-repeat;
+    }
 }
 
 /* BUTTON */
