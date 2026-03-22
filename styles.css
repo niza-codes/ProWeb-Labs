@@ -281,6 +281,7 @@ section{
     background-size:cover;
     background-position:center;
     z-index:0;
+    transition:0.4s;
 }
 
 /* DARK OVERLAY FOR READABILITY */
@@ -315,31 +316,14 @@ section{
     background-image:url("images/design.webp");
 }
 
-body.light .service-box {
-    background: rgba(255,255,255,0.95); /* solid-ish white so the form is visible */
-    color: #111;                         /* dark text for contrast */
-    border: 1px solid rgba(0,0,0,0.1);   /* optional subtle border */
-}
-
-/* SERVICE IMAGE */
-.service-image{
-    width:100%;
-    height:160px;
-    overflow:hidden;
-    border-radius:10px;
-    margin-bottom:15px;
-}
-
-.service-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:0.3s;
-}
-
 /* HOVER EFFECT */
-.service-box:hover .service-image img{
+.service-box:hover::before{
     transform:scale(1.05);
+}
+
+/* LIGHT MODE (DO NOT REMOVE IMAGES) */
+body.light .service-box::after{
+    background: rgba(255,255,255,0.4); /* lighter overlay instead */
 }
 
 /* ---------------- */
