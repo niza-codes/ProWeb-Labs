@@ -161,12 +161,12 @@ digital products.
 <textarea placeholder="Your Message"></textarea>
 
 <!-- SERVICE SELECTION -->
-<select required>
+<select id="service-select" required>
     <option value="">Select Service</option>
-    <option>Web Development</option>
-    <option>Mobile App Development</option>
-    <option>AI Development</option>
-    <option>UI/UX & Graphic Design</option>
+    <option value="web">Web Development</option>
+    <option value="app">App Development</option>
+    <option value="ai">AI Development</option>
+    <option value="design">UI/UX & Graphic Design</option>
 </select>
 
 <!-- BUDGET SLIDER -->
@@ -242,11 +242,33 @@ themeToggle.addEventListener("click", () => {
 <script>
 const budgetSlider = document.getElementById("budget");
 const budgetValue = document.getElementById("budget-value");
+const serviceSelect = document.getElementById("service-select");
 
-budgetSlider.addEventListener("input", () => {
+// PRICE MAP
+const servicePrices = {
+    web: 2000,
+    app: 2500,
+    ai: 20000,
+    design: 1500
+};
+
+// UPDATE SLIDER WHEN SERVICE CHANGES
+serviceSelect.addEventListener("change", () => {
+    const selected = serviceSelect.value;
+
+    if(servicePrices[selected]){
+        budgetSlider.value = servicePrices[selected];
+        updateBudgetDisplay();
+    }
+});
+
+// UPDATE TEXT WHEN SLIDER MOVES
+budgetSlider.addEventListener("input", updateBudgetDisplay);
+
+function updateBudgetDisplay(){
     let value = Number(budgetSlider.value).toLocaleString();
     budgetValue.textContent = "ZMW " + value;
-});
+}
 </script>
 
 </body>
