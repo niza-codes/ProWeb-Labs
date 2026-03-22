@@ -485,6 +485,50 @@ body:not(.light) .slider-labels{
 }
 
 /* ---------------- */
+/* SOCIAL SECTION */
+/* ---------------- */
+.social-section{
+    padding:40px 0;
+    text-align:center;
+}
+
+/* CONTAINER */
+.social-container{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+/* ICON BOXES */
+.social-icon{
+    width:45px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    border-radius:6px;
+    background:#00aaff;
+    color:#fff;
+    transition:0.3s;
+}
+
+/* HOVER */
+.social-icon:hover{
+    transform:translateY(-3px);
+    background:#0088cc;
+}
+
+/* LIGHT MODE */
+body.light .social-icon{
+    background:#111;
+    color:#fff;
+}
+
+/* ---------------- */
 /* FOOTER */
 /* ---------------- */
 footer{
