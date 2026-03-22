@@ -427,6 +427,38 @@ input, textarea{
     font-size:16px;      /* better readability */
 }
 
+/* SELECT DROPDOWN */
+select{
+    padding:16px;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    width:100%;
+}
+
+/* LIGHT MODE SELECT */
+body.light select{
+    border:1px solid rgba(0,0,0,0.2);
+}
+
+/* BUDGET CONTAINER */
+.budget-container{
+    text-align:left;
+    font-size:14px;
+}
+
+/* SLIDER */
+input[type="range"]{
+    width:100%;
+    margin-top:10px;
+}
+
+/* SLIDER VALUE */
+#budget-value{
+    font-weight:600;
+    color:#00aaff;
+}
+
 body.light input,
 body.light textarea {
     border: 1px solid rgba(0,0,0,0.2);  /* subtle dark border */
