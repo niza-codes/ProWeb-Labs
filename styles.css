@@ -466,6 +466,24 @@ body.light textarea {
     color: #111;                         /* text color */
 }
 
+/* SLIDER MIN/MAX LABELS */
+.slider-labels{
+    display:flex;
+    justify-content:space-between;
+    font-size:11px;
+    margin-top:3px;
+}
+
+/* LIGHT MODE (black text) */
+body.light .slider-labels{
+    color:#000;
+}
+
+/* DARK MODE (slightly softer white) */
+body:not(.light) .slider-labels{
+    color:rgba(255,255,255,0.7);
+}
+
 /* ---------------- */
 /* FOOTER */
 /* ---------------- */
