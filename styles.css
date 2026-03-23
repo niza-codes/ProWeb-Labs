@@ -164,7 +164,7 @@ body.light .navbar{
     width:80%;
     height:1px;
     margin:30px auto 0;
-    margin-bottom:15px;
+    margin-bottom:2px;
     background: linear-gradient(
         to right,
         transparent,
@@ -187,13 +187,13 @@ body.light .section-divider{
 /* ---------------- */
 section h2{
     text-align:center;
-    margin:5px 0;
+    margin:2px 0;
     font-size:32px;
 }
 
 @media (max-width:768px){
     section h2{
-        margin:5px 0;
+        margin:2px 0;
         font-size:26px;
     }
 }
