@@ -558,3 +558,53 @@ footer{
     font-size:13px; /* smaller + clean */
     opacity:0.8;    /* subtle professional look */
 }
+
+/* ---------------- */
+/* COOKIE POPUP */
+/* ---------------- */
+.cookie-popup{
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    max-width:420px;
+    background:#0a0f1c;
+    color:#fff;
+    padding:18px 20px;
+    border-radius:10px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    z-index:99999;
+    display:none;
+}
+
+/* CONTENT */
+.cookie-content{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    text-align:center;
+}
+
+/* BUTTON */
+.cookie-content button{
+    background:#00aaff;
+    color:#fff;
+    border:none;
+    padding:12px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.cookie-content button:hover{
+    background:#0088cc;
+}
+
+/* LIGHT MODE */
+body.light .cookie-popup{
+    background:#ffffff;
+    color:#111;
+    border:1px solid rgba(0,0,0,0.1);
+}
