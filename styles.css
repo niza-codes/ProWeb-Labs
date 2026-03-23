@@ -490,6 +490,15 @@ body:not(.light) .slider-labels{
 /* ---------------- */
 /* SOCIAL ICONS */
 /* ---------------- */
+.social-container{
+    display:flex;
+    flex-direction:row;   /* ✅ FORCE SIDEWAYS */
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;       /* allows wrapping on small screens */
+}
+
 .social-icon{
     width:45px;
     height:45px;
