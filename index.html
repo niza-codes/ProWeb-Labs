@@ -214,6 +214,16 @@ digital products.
 <p>© 2026 ProWeb Labs. All Rights Reserved.</p>
 </footer>
 
+<!-- COOKIE CONSENT -->
+<div id="cookie-popup" class="cookie-popup">
+  <div class="cookie-content">
+    <p>
+      We value your privacy. We use cookies to enhance your browsing experience.
+    </p>
+    <button id="accept-cookies">Accept All</button>
+  </div>
+</div>
+    
 <!-- MENU SCRIPT -->
 <script>
 const toggle = document.getElementById("menu-toggle");
@@ -297,6 +307,23 @@ function updateBudgetDisplay(){
     let value = Number(budgetSlider.value).toLocaleString();
     budgetValue.textContent = "ZMW " + value;
 }
+</script>
+
+<script>
+// COOKIE CONSENT
+const cookiePopup = document.getElementById("cookie-popup");
+const acceptBtn = document.getElementById("accept-cookies");
+
+// Check if already accepted
+if(!localStorage.getItem("cookiesAccepted")){
+    cookiePopup.style.display = "block";
+}
+
+// Accept cookies
+acceptBtn.addEventListener("click", () => {
+    localStorage.setItem("cookiesAccepted", "true");
+    cookiePopup.style.display = "none";
+});
 </script>
 
 </body>
