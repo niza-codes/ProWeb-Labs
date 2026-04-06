@@ -55,9 +55,29 @@ body.light .navbar{
     font-weight:600;
 }
 
+/* DEFAULT (LIGHT MODE) */
 .logo img{
-    height:40px;       /* controls logo size */
+    height:40px;
     width:auto;
+    display:block;
+}
+
+/* show light logo by default */
+.logo-light{
+    display:block;
+}
+
+/* hide dark logo by default */
+.logo-dark{
+    display:none;
+}
+
+/* DARK MODE SWITCH */
+body:not(.light) .logo-light{
+    display:none;
+}
+
+body:not(.light) .logo-dark{
     display:block;
 }
 
