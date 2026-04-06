@@ -49,36 +49,38 @@ body.light .navbar{
     background: rgba(255,255,255,0.9);
 }
 
-/* LOGO */
+/* LOGO CONTAINER */
 .logo{
-    font-size:22px;
-    font-weight:600;
+    position:relative;
+    height:40px;   /* lock height so layout doesn't jump */
 }
 
-/* DEFAULT (LIGHT MODE) */
+/* BOTH IMAGES STACKED */
 .logo img{
+    position:absolute;
+    top:0;
+    left:0;
     height:40px;
     width:auto;
     display:block;
 }
 
-/* show light logo by default */
+/* DEFAULT (LIGHT MODE) */
 .logo-light{
-    display:block;
+    opacity:1;
 }
 
-/* hide dark logo by default */
 .logo-dark{
-    display:none;
+    opacity:0;
 }
 
 /* DARK MODE SWITCH */
 body:not(.light) .logo-light{
-    display:none;
+    opacity:0;
 }
 
 body:not(.light) .logo-dark{
-    display:block;
+    opacity:1;
 }
 
 /* TOGGLE */
