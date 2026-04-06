@@ -55,6 +55,12 @@ body.light .navbar{
     font-weight:600;
 }
 
+.logo img{
+    height:40px;       /* controls logo size */
+    width:auto;
+    display:block;
+}
+
 /* TOGGLE */
 .theme-toggle{
     position:absolute;
